@@ -12,7 +12,7 @@
 ('K007','CTM','Obat Bebas','tablet','3','70000','75000'),
 ('K008','Amoxicillin','Obat Terbatas','Tablet','74','975','1100'),
 ('K009','Antimo','Obat Bebas','Tablet','2','5100','6000'),
-('K010','Parasetamol','Obat Bebas','Strips','100','3000','4000')
+('K010','Parasetamol','Obat Bebas','Strips','100','3000','4000');
 
 4.SELECT * FROM `tb_obat`
 
