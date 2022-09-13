@@ -14,41 +14,37 @@
 ('K009','Antimo','Obat Bebas','Tablet','2','5100','6000'),
 ('K010','Parasetamol','Obat Bebas','Strips','100','3000','4000');
 
-4.SELECT * FROM `tb_obat`
+4.SELECT * FROM `tb_obat`;
 
 5.SELECT * FROM `tb_obat`
 WHERE jenis = 'Obat Terbatas';
 
-6.SELECT * FROM `tb_obat` 
-WHERE stok >= 50 ORDER BY stok DESC;
+6.SELECT * FROM `tb_obat` WHERE stok > 50 ORDER BY stok DESC;
 
-7.SELECT * FROM `tb_obat`
-WHERE nama_obat LIKE 'Becombion%';
+7.SELECT * FROM `tb_obat` WHERE nama_obat LIKE 'Becombion%';
 
-8.SELECT jenis, COUNT(jenis) AS obat_bebas FROM `tb_obat` WHERE jenis = 'obat bebas' GROUP BY jenis;
+8.SELECT jenis, COUNT(*) AS jumlah_obat FROM `tb_obat` WHERE jenis = 'obat bebas' GROUP BY jenis;
 
-9.UPDATE `tb_obat` SET `stok`= 10 WHERE kode_obat ='K007';
+9.UPDATE `tb_obat` SET `stok`= 10 WHERE `tb_obat` . `kode_obat` ='K007';
 
-10.SELECT * FROM `tb_obat`
-WHERE jenis = 'Obat Bebas' AND satuan = 'Botol';
+10.SELECT * FROM `tb_obat` WHERE jenis = 'Obat Bebas' AND satuan = 'Botol';
 
-11.SELECT harga_beli, AVG (harga_beli) AS rerata_harga FROM `tb_obat` GROUP BY jenis = 'Obat Terbatas';
+11.SELECT jenis, AVG(harga_beli) AS rerata_beli FROM `tb_obat` WHERE jenis = 'Obat Terbatas';
 
 12.INSERT INTO tb_obat VALUES('K011','Paramex','Obat Bebas','Lembar','14','4000','5000');
 
-13.SELECT * FROM `tb_obat`
+13.SELECT * FROM `tb_obat` WHERE kode_obat = 'k011';
 
-14.SELECT jenis, SUM(stok)AS stok FROM `tb_obat` GROUP BY jenis
+14.SELECT jenis, SUM(stok)AS stok FROM `tb_obat` GROUP BY jenis;
 
 15.DELETE FROM `tb_obat` WHERE kode_obat ='K005';
-    SELECT * FROM `tb_obat`;
 
 16.SELECT * FROM `tb_obat` WHERE nama_obat LIKE 'A%';
 
-17.SELECT satuan FROM `tb_obat`GROUP BY satuan;
+17.SELECT satuan FROM `tb_obat` GROUP BY satuan;
 
 18. SELECT * FROM `tb_obat` WHERE harga_beli BETWEEN 10000 AND 25000;
 
-19.ALTER TABLE tb_obat RENAME tbl_obat;
+19. ALTER TABLE tb_obat RENAME tbl_obat;
 
-20. SELECT * FROM `tbl_obat` WHERE nama_obat LIKE '%mo%' AND stok >10;
+20. SELECT * FROM `tbl_obat` WHERE nama_obat LIKE '%mo%' AND stok > 10;
